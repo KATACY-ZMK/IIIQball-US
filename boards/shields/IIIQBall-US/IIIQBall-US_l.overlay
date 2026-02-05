@@ -1,0 +1,43 @@
+#include "IIIQBall-US.dtsi"
+&kscan0 {
+    compatible = "zmk,kscan-gpio-charlieplex";
+    interrupt-gpios = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+    gpios = 
+        <&xiao_d 10 GPIO_ACTIVE_HIGH>,  // IO0
+        <&xiao_d 9 GPIO_ACTIVE_HIGH>,  // IO1
+        <&xiao_d 8 GPIO_ACTIVE_HIGH>,  // IO2
+        <&xiao_d 7 GPIO_ACTIVE_HIGH>,  // IO3
+        <&xiao_d 6 GPIO_ACTIVE_HIGH>,  // IO4
+        <&xiao_d 3 GPIO_ACTIVE_HIGH>,  // IO5
+        <&xiao_d 2 GPIO_ACTIVE_HIGH>,  // IO6
+        <&xiao_d 0 GPIO_ACTIVE_HIGH>;  // IO7
+};
+
+&left1_encoder {
+   status = "okay";
+};
+
+&left2_encoder {
+   status = "okay";
+};
+
+
+&spi0 {
+    status = "disabled";
+
+    trackball: trackball@0 {
+        status = "disabled";
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+    };
+};
+
+/ {
+    trackball_listener: trackball_listener {
+        status = "disabled";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
+};

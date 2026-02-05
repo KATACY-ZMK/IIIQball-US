@@ -1,0 +1,5 @@
+config SHIELD_IIIQBALL-US_R
+    def_bool $(shields_list_contains,IIIQBall-US_r)
+
+config SHIELD_IIIQBALL-US_L
+    def_bool $(shields_list_contains,IIIQBall-US_l)

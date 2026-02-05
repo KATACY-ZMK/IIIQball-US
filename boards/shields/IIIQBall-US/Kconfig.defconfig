@@ -1,0 +1,29 @@
+if SHIELD_IIIQBALL-US_R
+
+config ZMK_KEYBOARD_NAME
+    default "IIIQBall-US"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_IIIQBALL-US_R || SHIELD_IIIQBALL-US_L
+
+config ZMK_SPLIT
+    default y
+
+endif
+
+if SHIELD_ECCHARLY_R
+
+# Other settings
+
+config ZMK_POINTING
+    default y
+
+# Assuming pointing device uses SPI
+config SPI
+    default y
+
+endif
