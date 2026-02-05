@@ -70,7 +70,7 @@
 };
 
 / {
-  trackball_listener: trackball_listener {  // "trackball_listener:" を追加
+  trackball_listener: trackball_listener {
     status = "okay";
     compatible = "zmk,input-listener";
     device = <&trackball>;

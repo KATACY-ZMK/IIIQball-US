@@ -1,6 +1,6 @@
 file_format: "1"
-id: ec-chalry
-name: ec-chalry
+id: IIIQBall-US
+name: IIIQBall-US
 type: shield
 url: https://github.com/KATACY-ZMK/split75-test
 requires: [seeeduino_xiao_ble]
