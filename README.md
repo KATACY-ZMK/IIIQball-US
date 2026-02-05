@@ -13,7 +13,11 @@
 
 ## ビルドガイド
 GitHubのアカウントを作成しから本リポジトリから画面右上の「Frok」をクリックして「Create fork」をクリックしてください。
+
 そこから「Actions」タブに移動し、「I understand my workflows, go ahead and enable them」をクリックしてGitHub Actionsを有効化してください。
+
 キーの変更をする際は[KeymapEditor](https://nickcoutsos.github.io/keymap-editor)にアクセスすることでGUIでの変更をすることができます。
+
 編集が完了した場合左上の「Save」を押すことでForkしたリポジトリに変更内容が更新され自動的にビルドされます。ビルドにはおよそ4,5分かかり、成功すると緑色のチェックマークがつき、「firmware」をダウンロード,zipファイルを解凍することで左右のマイコンに必要なUF2ファイルが出てきます。
+
 ファームウェアの書き込みはマイコンのコネクタ左上にあるボタンをダブルクリックすることでPC上にxiaoのフォルダ項目が出ます。この中に解凍したUF2ファイルを左右にそれぞれ入れ完成です。
